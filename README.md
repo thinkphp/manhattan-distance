@@ -1,4 +1,4 @@
-# Hamming-distance
+# Manhattan-distance
 
 ## Reference
 
