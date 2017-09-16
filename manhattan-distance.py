@@ -1,3 +1,5 @@
+import unittest
+
 def manhattan_distance(p, q):
 
     if(len(p) != len(q)):
@@ -19,9 +21,15 @@ def manhattan_distance_procedural(p, q):
         s += abs(p[i] - q[i])
 
     return s
-         
+
+class BinarySearchTest(unittest.TestCase):
+
+      def test_basic(self):
+          self.assertEquals(manhattan_distance([1,2,3],[4,5,6]), 9)
+          self.assertEquals(manhattan_distance_procedural([1,2,3],[4,5,6]), 9)
 
 
-print manhattan_distance([1,2,3],[4,5,6])
-print manhattan_distance_procedural([1,2,3],[4,5,6])
-    
+if __name__ == '__main__':
+
+   unittest.main() 
+             
